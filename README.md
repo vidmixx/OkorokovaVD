@@ -43,3 +43,21 @@ __
 
 08.02.2025
 
+устанавливает утилиту wget на вашу систему
+
+![image](https://github.com/user-attachments/assets/ffb5a3e6-5080-4871-abc8-b4b0fa93b587)
+
+скачиваем файл репозитория
+
+![image](https://github.com/user-attachments/assets/468ad6c8-066a-429e-a11f-cda851c3dd9d)
+
+Устанавливаем docker
+
+![image](https://github.com/user-attachments/assets/78cc0abc-5e38-4e3e-a3cc-229cddd662e6)
+
+Запускаем его и разрешаем автозапуск
+
+![image](https://github.com/user-attachments/assets/ee9777bd-6410-451b-949f-78f0c28e96f1)
+
+
+
