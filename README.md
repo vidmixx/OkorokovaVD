@@ -92,12 +92,24 @@ __15.02.2025__
 ![image](https://github.com/user-attachments/assets/b3291feb-57c0-4c88-b646-3a084550d410)
 
 
-скачиваем гит по ссылке из командной строки, прописав Y:
+установка гит: sudo yum install git 
+
+![image](https://github.com/user-attachments/assets/3b1c3249-0614-4b39-96d7-3a83963668d5)
+
 
 `git clone https://github.com/skl256/grafana_stack_for_docker.git`
 
-![image](https://github.com/user-attachments/assets/b9a4cf0f-3fbb-4a06-8946-affd8d480170)
+![image](https://github.com/user-attachments/assets/9097ba2b-23af-4db1-bccf-6a5eb038c6b8)
 
+
+переходим в папку: 
+
+![image](https://github.com/user-attachments/assets/49539404-b6e8-4089-bc87-3ffd64d9be1d)
+
+                                            
+создаем полный путь  
+
+![image](https://github.com/user-attachments/assets/5381f449-c7b1-4672-a2fc-f251c7580e54)
 
 
 
