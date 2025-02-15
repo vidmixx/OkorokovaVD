@@ -102,14 +102,31 @@ __15.02.2025__
 ![image](https://github.com/user-attachments/assets/9097ba2b-23af-4db1-bccf-6a5eb038c6b8)
 
 
-переходим в папку: 
-
-![image](https://github.com/user-attachments/assets/49539404-b6e8-4089-bc87-3ffd64d9be1d)
+переходим в папку: `cd grafana_stack_for_docker`
 
                                             
-создаем полный путь  
-
-![image](https://github.com/user-attachments/assets/5381f449-c7b1-4672-a2fc-f251c7580e54)
+создаем полный путь: `sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`
 
 
+создаем структуру каталогов для grafana и связанных с ней компонентов: `sudo mkdir -p /mnt/common_volume/grafana/{grafana-config,grafana-data,prometheus-data}`
 
+
+все файлы и каталоги в указанных директориях будут переданы в собственность текущему пользователю и его группе: `sudo chown -R $(id -u):$(id -g) {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}`
+
+
+файл grafana.ini уже существует, команда обновит его временные метки (время последнего доступа и изменения). Если файл не существует, команда создаст новый пустой файл с указанным именем по указанному пути:
+
+`touch /mnt/common_volume/grafana/grafana-config/grafana.ini`
+
+
+копируем все файлы и подкаталоги из директории config в директорию /mnt/common_volume/swarm/grafana/config/:
+
+`cp config/* /mnt/common_volume/swarm/grafana/config/`
+
+
+команда переименовывает файл grafana.yaml в docker-compose.yaml. Ничего не покажет, но можно проверить при помощи команды ls:
+
+`mv grafana.yaml docker-compose.yaml`
+
+
+`sudo docker compose up -d`
