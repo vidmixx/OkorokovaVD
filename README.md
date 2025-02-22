@@ -138,5 +138,26 @@ __22.02.2025__
 
 ![image](https://github.com/user-attachments/assets/cd59b18d-dbb2-4309-ac60-d8bc43d5ae2f)
 
+- d
 
+![image](https://github.com/user-attachments/assets/9bb313f0-ed3d-4282-9b34-48c491eb8e55)
+
+
+
+останавливает все запущенные контейнеры, определённые в файле docker-compose.yml, но не удаляет их
+
+`sudo docker compose stop`
+
+![image](https://github.com/user-attachments/assets/737062df-5959-4c7f-856f-d1a15981c37a)
+
+
+полностью останавливает и удаляет все контейнеры, сети, объёмы данных (volumes) и другие ресурсы, созданные с помощью docker-compose.yml 
+
+`sudo docker compose down`
+
+![image](https://github.com/user-attachments/assets/3877db92-3d8c-4b3d-bb3d-49d89e669f4a)
+
+ps
+
+![image](https://github.com/user-attachments/assets/50afd43d-f3d1-4c04-afb6-686f2d4fd200)
 
