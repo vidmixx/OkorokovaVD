@@ -130,3 +130,13 @@ __15.02.2025__
 
 
 `sudo docker compose up -d`
+
+__
+__22.02.2025__
+
+зашли в файл
+
+![image](https://github.com/user-attachments/assets/cd59b18d-dbb2-4309-ac60-d8bc43d5ae2f)
+
+
+
