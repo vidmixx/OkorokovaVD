@@ -157,7 +157,11 @@ __22.02.2025__
 
 ![image](https://github.com/user-attachments/assets/3877db92-3d8c-4b3d-bb3d-49d89e669f4a)
 
-ps
+
+показывает статус всех контейнеров, определённых в файле docker-compose.yml (команда выводит список контейнеров вместе с их состоянием (запущен/остановлен), портами, сетями и другими параметрами)
+
+`sudo docker compose ps`
 
 ![image](https://github.com/user-attachments/assets/50afd43d-f3d1-4c04-afb6-686f2d4fd200)
+
 
