@@ -1,21 +1,24 @@
-# OkorokovaVD
+## 25.01.2025
 
-__
+### Создание и запуск ВРМ, установка гост.доп
 
-__25.01.2025__
-
-создали новую врм, 4гб операционной памяти, 2 процессора
+создали новую врм, 
+* образ: oracle linux
+* 4гб операционной памяти
+* 2 процессора
 
 установили гостевые дополнения
 
 
-__
 
-__01.02.2025__
+
+## 01.02.2025
+
+### Установка wget
 
 ввели команду для установки улиты wget: `yum install wget` (sudo yum install wget - sudo для выполнения команды под правами суперпользователя )
 
-ОШИБКА: is not in the sudoers file
+__ОШИБКА:__ is not in the sudoers file
 
 ![image](https://github.com/user-attachments/assets/179d9bbc-24cd-43c2-adff-7ef5f2116a3a)
 
@@ -43,34 +46,48 @@ __01.02.2025__
 ![image](https://github.com/user-attachments/assets/c757f47e-e1dc-49ab-b4e5-7b002caca82d)
 
 
-__
 
-__08.02.2025__
+
+## 08.02.2025
+
+### Установка curl
+
+*curl это инструмент для передачи данных с сервера или к серверу через URL*
 
 установка пакета curl в вашу систему: `sudo yum install curl`, пишет что уже установлен
 
 ![image](https://github.com/user-attachments/assets/ffb5a3e6-5080-4871-abc8-b4b0fa93b587)
 
+### Добавление репозитория Docker
 
-скачиваем файл репозитория: `sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`
+скачиваем файл репозитория:
+
+`sudo wget -P /etc/yum.repos.d/ https://download.docker.com/linux/centos/docker-ce.repo`
 
 ![image](https://github.com/user-attachments/assets/468ad6c8-066a-429e-a11f-cda851c3dd9d)
 
 
-установка docker: `sudo yum install docker-ce docker-ce-cli containerd.io`
+### Установка Docker 
+
+`sudo yum install docker-ce docker-ce-cli containerd.io`
 
 ![image](https://github.com/user-attachments/assets/78cc0abc-5e38-4e3e-a3cc-229cddd662e6)
 
 
-запуск его и разрешение автозапуска: `sudo systemctl enable docker --now`
+### Запуск службы Docker
+
+`sudo systemctl enable docker --now`
 
 ![image](https://github.com/user-attachments/assets/ee9777bd-6410-451b-949f-78f0c28e96f1)
 
-__
 
-__15.02.2025__
+
+## 15.02.2025
+
+### Обновление и скачивание последней версии Docker Compose
 
 обновление переменной COMVER (получена в результате запроса curl, содержит в себе носер последней версии Docker Compose)
+
 `COMVER=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)`
 
 ![image](https://github.com/user-attachments/assets/a6473bcf-3310-4f0e-b2b5-0b62eb0055ba)
@@ -92,14 +109,20 @@ __15.02.2025__
 ![image](https://github.com/user-attachments/assets/b3291feb-57c0-4c88-b646-3a084550d410)
 
 
-установка гит: sudo yum install git 
+Клонирование репозитория с конфигурацией Grafana
+
+установка Git через системный менеджер пакетов: 
+
+`sudo yum install git`
 
 ![image](https://github.com/user-attachments/assets/3b1c3249-0614-4b39-96d7-3a83963668d5)
 
 
-`git clone https://github.com/skl256/grafana_stack_for_docker.git`
+клонируем репозиторий с конфигурацией Grafana:
 
-![image](https://github.com/user-attachments/assets/9097ba2b-23af-4db1-bccf-6a5eb038c6b8)
+`git clone https://github.com/vidmixx/grafana_stack_for_docker.git`
+
+*(скрин пока в ожидании)*
 
 
 переходим в папку: `cd grafana_stack_for_docker`
