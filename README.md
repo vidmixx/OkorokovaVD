@@ -12,8 +12,7 @@
 
 установили гостевые дополнения
 
-
-
+---
 
 ## 01.02.2025
 
@@ -27,6 +26,7 @@ __ОШИБКА:__ is not in the sudoers file
 
 ![image](https://github.com/user-attachments/assets/179d9bbc-24cd-43c2-adff-7ef5f2116a3a)
 
+---
 
 1. перереключаемся на суперпользователя: 
 
@@ -34,6 +34,7 @@ __ОШИБКА:__ is not in the sudoers file
 
 ![image](https://github.com/user-attachments/assets/b3229764-d06f-4906-abc6-997263483bcb)
 
+---
 
 2. открываем конфигурационный файл /etc/sudoers:
 
@@ -41,11 +42,13 @@ __ОШИБКА:__ is not in the sudoers file
 
 ![image](https://github.com/user-attachments/assets/32b0b954-630f-4430-b8aa-910714213de3)
 
+---
 
 3. внутри прописываем права нашему пользователю __okorokova ALL=(ALL)  ALL__, сохранили (esc -> shift+: -> wq!)
 
 ![image](https://github.com/user-attachments/assets/08bd7ea2-d2e3-475d-ac8d-1bbddbdbb34e)
 
+---
 
 после решения проблемы переходим в другое окно под нашим пользователем
 
@@ -55,8 +58,7 @@ __ОШИБКА:__ is not in the sudoers file
 
 ![image](https://github.com/user-attachments/assets/c757f47e-e1dc-49ab-b4e5-7b002caca82d)
 
-
-
+---
 
 ## 08.02.2025
 
@@ -72,6 +74,8 @@ __пишет что уже установлен__
 
 ![image](https://github.com/user-attachments/assets/ffb5a3e6-5080-4871-abc8-b4b0fa93b587)
 
+---
+
 ### Добавление репозитория Docker
 
 чтобы установить актуальную версию Docker, необходимо добавить официальный репозиторий Docker в систему, скачиваем файл репозитория:
@@ -80,6 +84,7 @@ __пишет что уже установлен__
 
 ![image](https://github.com/user-attachments/assets/468ad6c8-066a-429e-a11f-cda851c3dd9d)
 
+---
 
 ### Установка Docker 
 
@@ -89,14 +94,15 @@ __пишет что уже установлен__
 
 ![image](https://github.com/user-attachments/assets/78cc0abc-5e38-4e3e-a3cc-229cddd662e6)
 
+---
 
 ### Запуск службы Docker
 
 включен автозапуск службы Docker при загрузке системы:
 
-__подробно:__
-
 `sudo systemctl enable docker --now`
+
+__подробно:__
 
 * systemctl — это утилита для управления системными службами в Linux
 
@@ -104,10 +110,9 @@ __подробно:__
 
 * --now — дополнительно к enable сразу запускает службу Docker (так же как и systemctl start docker)
 
-
 ![image](https://github.com/user-attachments/assets/ee9777bd-6410-451b-949f-78f0c28e96f1)
 
-
+---
 
 ## 15.02.2025
 
@@ -119,7 +124,7 @@ __подробно:__
 
 ![image](https://github.com/user-attachments/assets/a6473bcf-3310-4f0e-b2b5-0b62eb0055ba)
 
-
+---
 
 2. скачиваем скрипт последней версии, используя объявленную ранее переменную и помещая скрипт в каталогг /usr/bin/docker-compose
 
@@ -137,7 +142,7 @@ __подробно:__
 
 ![image](https://github.com/user-attachments/assets/6dcf6c85-e096-42ca-a47b-1e321140a3a3)
 
-
+---
 
 3. предоставление прав на выполнение файла docker-compose:
 
@@ -145,7 +150,7 @@ __подробно:__
 
 ![image](https://github.com/user-attachments/assets/21f2dfb9-0470-490a-8402-30481d514168)
 
-
+---
 
 4. вывод нынешней установленной версии: 
 
@@ -153,7 +158,7 @@ __подробно:__
 
 ![image](https://github.com/user-attachments/assets/b3291feb-57c0-4c88-b646-3a084550d410)
 
-
+---
 
 ### Клонирование репозитория с конфигурацией Grafana
 
@@ -163,7 +168,7 @@ __подробно:__
 
 ![image](https://github.com/user-attachments/assets/3b1c3249-0614-4b39-96d7-3a83963668d5)
 
-
+---
 
 2. клонируем репозиторий с конфигурацией Grafana:
 
@@ -171,13 +176,13 @@ __подробно:__
 
 *(не сохранился скрин, пока в ожидании)*
 
-
+---
 
 3. переход в склонированный каталог: 
 
 `cd grafana_stack_for_docker`
 
-
+---
 
 ### Подготовка директорий и файлов конфигурации 
 
@@ -193,7 +198,7 @@ __подробно:__
 
 * /mnt/common_volume/swarm/grafana/config: путь к новой директории, которая будет создана.
 
-
+---
 
 2. создаем структуру каталогов для grafana и связанных с ней компонентов: 
 
@@ -204,7 +209,7 @@ __подробно:__
 * команда создает три директории внутри /mnt/common_volume/grafana/: grafana-config, grafana-data, prometheus-data
 * {} используется для создания нескольких директорий одним вызовом mkdir.
 
-
+---
 
 3. все файлы и каталоги в указанных директориях будут переданы в собственность текущему пользователю и его группе: 
 
@@ -222,6 +227,7 @@ __подробно:__
 
 * {/mnt/common_volume/swarm/grafana/config,/mnt/common_volume/grafana}: список директорий, для которых меняется владелец.
 
+---
 
 4. создаем пустой файл или обновляем аременные метки: файл grafana.ini уже существует, команда обновит его временные метки (время последнего доступа и изменения).
    
@@ -233,7 +239,7 @@ __подробно__
   
 * /mnt/common_volume/grafana/grafana-config/grafana.ini: путь к новому файлу
 
-
+---
 
 5. копируем все файлы и подкаталоги из директории config в директорию /mnt/common_volume/swarm/grafana/config/:
 
@@ -247,6 +253,7 @@ __подробно__
   
 * /mnt/common_volume/swarm/grafana/config/: целевая директория, куда будут скопированы файлы
 
+---
 
 6. команда переименовывает файл grafana.yaml в docker-compose.yaml, ничего не покажет, но можно проверить при помощи команды __ls__:
 
@@ -254,7 +261,7 @@ __подробно__
 
 *(не сохранился скрин, пока в ожидании)*
 
-
+---
 
 7. запускаем контейнеры Docker в фоновом режиме:
 
@@ -262,7 +269,7 @@ __подробно__
 
 *(не сохранился скрин, пока в ожидании)*
 
-
+---
 
 ## 22.02.2025
 
@@ -278,7 +285,7 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/cd59b18d-dbb2-4309-ac60-d8bc43d5ae2f)
 
-
+---
 
 ### Запуск контейнеров в фоновом режиме:
 
@@ -286,7 +293,7 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/9bb313f0-ed3d-4282-9b34-48c491eb8e55)
 
-
+--- 
 
 ### Остановка контейнеров
 
@@ -296,7 +303,7 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/737062df-5959-4c7f-856f-d1a15981c37a)
 
-
+---
 
 ### Полное удаление контейнеров
 
@@ -306,7 +313,7 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/3877db92-3d8c-4b3d-bb3d-49d89e669f4a)
 
-
+---
 
 ### Проверка статуса контейнеров
 
@@ -316,4 +323,13 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/50afd43d-f3d1-4c04-afb6-686f2d4fd200)
 
+---
+
+### Клонирование удаленного Git-репозитория с GitHub
+
+клонирование удаленного Git-репозитория с GitHub в папку:
+
+`git clone https://github.com/vidmixx/OkorokovaVD.git`
+
+*(в процессе)*
 
