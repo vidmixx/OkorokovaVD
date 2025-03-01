@@ -327,9 +327,20 @@ __выйти с сохранением: wq!__
 
 ### Клонирование удаленного Git-репозитория с GitHub
 
+переход в нужную папку
+
+`cd grafana_stack_for_docker` 
+
 клонирование удаленного Git-репозитория с GitHub в папку:
 
 `git clone https://github.com/vidmixx/OkorokovaVD.git`
 
-*(в процессе)*
+![image](https://github.com/user-attachments/assets/b7498839-6aa0-4e44-8f59-657c12eab2d7)
+
+копия файлов
+
+`cp docker-compose.yaml docker-compose.yaml1`
+`cp prometheus.yaml  prometheus.yaml1`
+
+
 
