@@ -346,4 +346,5 @@ __выйти с сохранением: wq!__
 `cp prometheus.yaml  prometheus.yaml1`
 
 
+![image](https://github.com/user-attachments/assets/bd9cec52-9489-46d6-be79-2e646f88c2d7)
 
