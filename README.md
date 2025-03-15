@@ -172,9 +172,10 @@ __подробно:__
 
 2. клонируем репозиторий с конфигурацией Grafana:
 
-`git clone https://github.com/vidmixx/grafana_stack_for_docker.git`
+`git clone https://github.com/skl256/grafana_stack_for_docker.git`
 
-*(не сохранился скрин, пока в ожидании)*
+![image](https://github.com/user-attachments/assets/9f6272b6-76f7-47fd-adfb-46a43d046476)
+
 
 ---
 
@@ -259,7 +260,8 @@ __подробно__
 
 `mv grafana.yaml docker-compose.yaml`
 
-*(не сохранился скрин, пока в ожидании)*
+![image](https://github.com/user-attachments/assets/3280945e-30ce-400f-8ff1-90d9cecd413c)
+
 
 ---
 
@@ -267,7 +269,8 @@ __подробно__
 
 `sudo docker compose up -d`
 
-*(не сохранился скрин, пока в ожидании)*
+![image](https://github.com/user-attachments/assets/bdd96786-fc0a-4e7d-87c2-a47e2bac0102)
+
 
 ---
 
