@@ -334,16 +334,38 @@ __выйти с сохранением: wq!__
 
 `cd grafana_stack_for_docker` 
 
+
+
 клонирование удаленного Git-репозитория с GitHub в папку:
 
 `git clone https://github.com/vidmixx/OkorokovaVD.git`
 
 ![image](https://github.com/user-attachments/assets/b7498839-6aa0-4e44-8f59-657c12eab2d7)
 
+
+
 копия файлов
 
 `cp docker-compose.yaml docker-compose.yaml1`
+
+![image](https://github.com/user-attachments/assets/9046f529-c83f-4e8e-952a-11d889e59866)
+
+
+
+`cd /mnt/common_volume/swarm/grafana/config`
+
 `cp prometheus.yaml  prometheus.yaml1`
+
+![image](https://github.com/user-attachments/assets/1d0a5a19-5a99-470d-9a89-639703aff244)
+
+
+`sudo docker-compose down`
+
+`sudo docker-compose up -d`
+
+![image](https://github.com/user-attachments/assets/9eb83568-7208-4164-92c1-fbdc67e68e78)
+
+
 
 
 ![image](https://github.com/user-attachments/assets/bd9cec52-9489-46d6-be79-2e646f88c2d7)
