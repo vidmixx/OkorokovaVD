@@ -361,12 +361,30 @@ __выйти с сохранением: wq!__
 
 `sudo docker-compose down`
 
-`sudo docker-compose up -d`
+![image](https://github.com/user-attachments/assets/10a66142-87fc-487e-8086-2c97eac692c7)
 
-![image](https://github.com/user-attachments/assets/9eb83568-7208-4164-92c1-fbdc67e68e78)
+`sudo docker-compose stop`
 
+![image](https://github.com/user-attachments/assets/21401011-d651-4868-b7e2-e7b7fea6e7d1)
 
-
+ищем строчку -targets прописываем exporter:9100
 
 ![image](https://github.com/user-attachments/assets/bd9cec52-9489-46d6-be79-2e646f88c2d7)
+
+`sudo docker-compose up -d`
+
+![image](https://github.com/user-attachments/assets/0b857818-edfc-4e33-af25-7d07c1dcfc08)
+
+переходим на сайт localhost:3000 User & Password GRAFANA: admin После того как зашли, нужно создать Dashboards. Путь где его можно создать Home -> Connections -> Data sources -> Add data source
+
+Где нужно нажать на +Add visualization -> Configure a new data source -> Prometheus
+
+Настройки: прометеуса: http://prometheus:9090 Authentication: Basic authentication После того как все настроили нажимаем Save & test
+
+Cоздав Dashboards импортируем его: Путь где его можно импортировать Home -> Dashboards -> Import dashboard
+
+В поле нужно написать 1860 -> Load Select Prometheus -> Import -> Название Prometheus
+
+
+![image](https://github.com/user-attachments/assets/c28bc724-80ec-44d3-8c1b-8f49b186ddd8)
 
