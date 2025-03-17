@@ -344,13 +344,13 @@ __выйти с сохранением: wq!__
 
 
 
-копия файлов
+### Копирование файлов
 
 `cp docker-compose.yaml docker-compose.yaml1`
 
 ![image](https://github.com/user-attachments/assets/9046f529-c83f-4e8e-952a-11d889e59866)
 
-
+---
 
 `cd /mnt/common_volume/swarm/grafana/config`
 
@@ -375,26 +375,29 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/0b857818-edfc-4e33-af25-7d07c1dcfc08)
 
-localhost:3000 
+---
 
-User & Password GRAFANA: admin 
+### Grafana
 
-создание Dashboards: Home -> Connections -> Data sources -> Add data source
-
-где нужно нажать на +Add visualization -> Configure a new data source -> Prometheus
-
-настройки прометеуса: 
-
-* http://prometheus:9090 
-* Authentication: Basic authentication 
-
-после того как все настроили нажимаем Save & test
-
-создав Dashboards импортируем его: 
-
-Home -> Dashboards -> Import dashboard
-
-В поле нужно написать 1860 -> Load Select Prometheus -> Import -> Название Prometheus
+* переходим на сайт 
+* * localhost:3000
+* * User & Password GRAFANA: admin
+Код графаны: 3000
+Код прометеуса: http://prometheus:9090
+в меню выбираем вкладку Dashboards и создаем Dashboard
+ждем кнопку +Add visualization, а после "Configure a new data source"
+выбираем Prometheus
+Connection
+http://prometheus:9090
+Authentication
+Basic authentication
+User: admin
+Password: admin
+Нажимаем на Save & test и должно показывать зелёную галочку
+в меню выбираем вкладку Dashboards и создаем Dashboard
+ждем кнопку "Import dashboard"
+Find and import dashboards for common applications at grafana.com/dashboards: 1860 //ждем кнопку Load
+Select Prometheus ждем кнопку "Import"
 
 
 ![image](https://github.com/user-attachments/assets/c28bc724-80ec-44d3-8c1b-8f49b186ddd8)
