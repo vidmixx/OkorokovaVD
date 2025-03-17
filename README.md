@@ -350,7 +350,7 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/9046f529-c83f-4e8e-952a-11d889e59866)
 
----
+
 
 `cd /mnt/common_volume/swarm/grafana/config`
 
@@ -358,6 +358,7 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/1d0a5a19-5a99-470d-9a89-639703aff244)
 
+---
 
 `sudo docker-compose down`
 
@@ -379,13 +380,14 @@ __выйти с сохранением: wq!__
 
 ### Grafana
 
-* переходим на сайт 
-* * localhost:3000
-* * User & Password GRAFANA: admin
-Код графаны: 3000
-Код прометеуса: http://prometheus:9090
-в меню выбираем вкладку Dashboards и создаем Dashboard
-ждем кнопку +Add visualization, а после "Configure a new data source"
+1. переходим на сайт 
+  * localhost:3000
+  * User & Password GRAFANA: admin
+  * Код графаны: 3000
+  * Код прометеуса: http://prometheus:9090
+
+2. в меню выбираем вкладку Dashboards и создаем Dashboard
+3. ждем кнопку +Add visualization, а после "Configure a new data source"
 выбираем Prometheus
 Connection
 http://prometheus:9090
