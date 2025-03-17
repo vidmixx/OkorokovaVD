@@ -375,13 +375,24 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/0b857818-edfc-4e33-af25-7d07c1dcfc08)
 
-переходим на сайт localhost:3000 User & Password GRAFANA: admin После того как зашли, нужно создать Dashboards. Путь где его можно создать Home -> Connections -> Data sources -> Add data source
+localhost:3000 
 
-Где нужно нажать на +Add visualization -> Configure a new data source -> Prometheus
+User & Password GRAFANA: admin 
 
-Настройки: прометеуса: http://prometheus:9090 Authentication: Basic authentication После того как все настроили нажимаем Save & test
+создание Dashboards: Home -> Connections -> Data sources -> Add data source
 
-Cоздав Dashboards импортируем его: Путь где его можно импортировать Home -> Dashboards -> Import dashboard
+где нужно нажать на +Add visualization -> Configure a new data source -> Prometheus
+
+настройки прометеуса: 
+
+* http://prometheus:9090 
+* Authentication: Basic authentication 
+
+после того как все настроили нажимаем Save & test
+
+создав Dashboards импортируем его: 
+
+Home -> Dashboards -> Import dashboard
 
 В поле нужно написать 1860 -> Load Select Prometheus -> Import -> Название Prometheus
 
