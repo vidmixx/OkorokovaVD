@@ -391,6 +391,7 @@ __cp (имя файла-оригинала) (имя копии)__ - комнад
 ![image](https://github.com/user-attachments/assets/bd9cec52-9489-46d6-be79-2e646f88c2d7)
 
 
+поднятие контейнеров Docker через команду, для того чтобы зайти в него через браузер.
 
 `sudo docker-compose up -d`
 
@@ -408,20 +409,23 @@ __cp (имя файла-оригинала) (имя копии)__ - комнад
   * Код прометеуса: http://prometheus:9090
 
 2. в меню выбираем вкладку Dashboards и создаем Dashboard
-3. ждем кнопку +Add visualization, а после "Configure a new data source"
-выбираем Prometheus
-Connection
-http://prometheus:9090
-Authentication
-Basic authentication
-User: admin
-Password: admin
-Нажимаем на Save & test и должно показывать зелёную галочку
-в меню выбираем вкладку Dashboards и создаем Dashboard
-ждем кнопку "Import dashboard"
-Find and import dashboards for common applications at grafana.com/dashboards: 1860 //ждем кнопку Load
-Select Prometheus ждем кнопку "Import"
+3. ждем кнопку +Add visualization -> Configure a new data source -> Prometheus
+* Connection: http://prometheus:9090
+* Authentication: Basic authentication
+* User: admin
+* Password: admin
 
+нажимаем на Save & test и должно показывать зелёную галочку
+
+создав Dashboards импортируем его: Путь где его можно импортировать Home -> Dashboards -> Import dashboard
+
+в поле нужно написать 1860 -> Load (рис. 1). Select Prometheus -> Import -> Название Prometheus
+
+![image](https://github.com/user-attachments/assets/cfc2093b-c422-4bc0-936a-98810eb0a7f4)
+
+Рисунок 1 - Импорт prometheus
 
 ![image](https://github.com/user-attachments/assets/c28bc724-80ec-44d3-8c1b-8f49b186ddd8)
+
+Рисунок 2 - Результат
 
