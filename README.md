@@ -429,3 +429,64 @@ __cp (имя файла-оригинала) (имя копии)__ - комнад
 
 Рисунок 2 - Результат
 
+
+
+### VictoriaMetrics
+
+Для начала изменим docker-compose.yaml
+
+cd grafana_stack_for_docker
+• команда cd grafana_stack_for_docker изменяет текущий рабочий каталог на каталог grafana_stack_for_docker.
+
+sudo vi docker-compose.yaml
+• команда sudo открывает файл docker-compose.yaml в редакторе vi с правами суперпользователя.
+
+В самом текстовом редакторе после prometheus вставляем
+
+![image](https://github.com/user-attachments/assets/81549b2b-2b05-4c1a-ae15-86e0e65c1d64)
+
+---
+
+1. переходим на сайт: localhost:3000
+2. создаем Dashboard
+3. +Add visualization -> Configure a new data source -> Prometheus
+* Connection: http://victoriametrics:8428
+* Authentication: No Authentication
+* нажимаем на Save & test
+
+4. создаем Dashboards
+5.(http://localhost:8428)
+
+![image](https://github.com/user-attachments/assets/0f4cb6ba-c3b7-4fb7-b508-04c7599672ab)
+
+---
+
+code -> в поле прописываем  переменную __light_metric1__ -> Run ..
+
+![image](https://github.com/user-attachments/assets/01beede0-2a7f-4fa1-ba24-424debf88cd5)
+
+
+
+присваеваем значение 0, потом меняем значение на любое до 1000
+
+`echo -e "# TYPE OILCOINT_metric1 gauge\nOILCOINT_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus`
+
+![image](https://github.com/user-attachments/assets/72ea302b-eec6-4595-b8d9-b47f04776476)
+
+
+
+обновляем 
+
+![image](https://github.com/user-attachments/assets/310f4384-6ab3-4aea-b47b-0e31d95fb9cb)
+
+
+
+визуализация: сплошная или прыривистая
+
+![image](https://github.com/user-attachments/assets/059e446c-0f8f-4b5e-9c35-dc79af3f5f77)
+
+
+итог
+
+![image](https://github.com/user-attachments/assets/b2dbf397-681c-4c7e-9bf5-62a49b41c9d3)
+
