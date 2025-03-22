@@ -342,9 +342,13 @@ __выйти с сохранением: wq!__
 
 ![image](https://github.com/user-attachments/assets/b7498839-6aa0-4e44-8f59-657c12eab2d7)
 
+---
 
+### Бекапы файлов
 
-### Копирование файлов
+*__Бэкап__ - это резервная копия ценных данных, которая хранится отдельно от этих данных и может быть использована для их восстановления.*
+
+__cp (имя файла-оригинала) (имя копии)__ - комнада делает  копию файла
 
 `cp docker-compose.yaml docker-compose.yaml1`
 
@@ -360,23 +364,40 @@ __выйти с сохранением: wq!__
 
 ---
 
-`sudo docker-compose down`
+перемещаем файлы в корень grafana_stack_for_docker
 
-![image](https://github.com/user-attachments/assets/10a66142-87fc-487e-8086-2c97eac692c7)
+`mv OkorokovaVD/prometheus.yaml ./`                                  
+
+`mv OkorokovaVD/docker-compose.yaml ./`
+
+![image](https://github.com/user-attachments/assets/2be19a59-4ec1-4fb7-b1c8-b067735f8779)
+
+
+
+перемещаем файл prometeus.yaml в /mnt/common_volume/swarm/grafana/config/ заменяя предыдущий файл.
+
+![image](https://github.com/user-attachments/assets/a6b1b285-61c3-4c60-909a-8761ff365749)
+
+---        
 
 `sudo docker-compose stop`
 
 ![image](https://github.com/user-attachments/assets/21401011-d651-4868-b7e2-e7b7fea6e7d1)
 
+
+
 ищем строчку -targets прописываем exporter:9100
 
 ![image](https://github.com/user-attachments/assets/bd9cec52-9489-46d6-be79-2e646f88c2d7)
+
+
 
 `sudo docker-compose up -d`
 
 ![image](https://github.com/user-attachments/assets/0b857818-edfc-4e33-af25-7d07c1dcfc08)
 
 ---
+
 
 ### Grafana
 
