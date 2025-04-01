@@ -2,6 +2,7 @@
 
 ### АИС
 
+![image](https://github.com/user-attachments/assets/7cc2f35f-d822-4483-94e8-27821be36225)
 
 
 ### Создание и запуск ВРМ, установка гост.доп
